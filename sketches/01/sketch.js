@@ -74,6 +74,10 @@ var theyExpand = 1;
 
 // use FFT bin level to change speed and diameter
 Particle.prototype.update = function(someLevel) {
+  this.position.y += this.speed.y / (someLevel*2);
+  if (this.position.y > height) {
+    this.position.y = 0;
+  }
   this.diameter = map(someLevel, 0, 1, 0, 100) * this.scale * theyExpand;
 }
 
