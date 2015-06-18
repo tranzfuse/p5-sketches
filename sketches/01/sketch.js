@@ -28,6 +28,8 @@ function setup() {
     var position = createVector(x, y);
     particles[i] = new Particle(position);
   }
+
+
 }
 
 function draw() {
